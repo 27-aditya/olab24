@@ -28,7 +28,7 @@ public class OldSelection {
 		TextBook tb = new TextBook("History");
 		System.out.println(getAgeOrTitle(tb));
 
-		Fiction fc = new Fiction("Lord Of The Rings",FictionType.Satire);
+		Fiction fc = new Fiction("Lord Of The Rings",FictionType.Tragedy);
 		System.out.println(getAgeOrTitle(fc));
 		
 		Comic cc = new Comic("Spiderman", 16);

@@ -5,9 +5,9 @@ public sealed interface IBook permits Comic,Fiction,TextBook{
 }
 
 enum FictionType {
-    Shakespeare,
-	Self_Interest,
-	Satire
+    Comedy,
+	Tragedy,
+	GoK
 }
 
 record Comic(String Title,int ageOfMainCharacter) implements IBook {

@@ -31,7 +31,7 @@ public class NewSelection {
 		
 		Comic cc = new Comic("Spiderman",16);
 		
-		Fiction fc = new Fiction("Lord of the rings",FictionType.Satire);
+		Fiction fc = new Fiction("Lord of the rings",FictionType.Tragedy);
 		
 		System.out.println(getAgeOrTitle(fc));
 		
