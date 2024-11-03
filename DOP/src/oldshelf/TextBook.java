@@ -1,37 +1,28 @@
 package oldshelf;
 
-public class OldSelection {
+public class TextBook extends Book {
 
-	// TODO: Complete this method.
-	/**
-	 * 
-	 * @param o object
-	 * returns if o is not a book, returns empty string, if Comic, returns title, of Fiction
-	 * returns name, and if TextBook, returns subject.
-	 */
-	public static String getAgeOrTitle(Object obj) {
-		
-		if (obj instanceof Book) {
-			if (obj instanceof Comic) 
-				return ((Comic)obj).getTitle();
-			else if (obj instanceof Fiction) 
-				return ((Fiction)obj).getName();
-			else if (obj instanceof TextBook) 
-				return ((TextBook)obj).getSubject();
-		}
-		return null;
+	// TODO: Make this a final field with most strict visiibility possible.
+	private final String subject;
+	
+	// TODO: Change the constructor if required? Correct any errors
+	public TextBook(String subject) {
+		super();
+		this.subject = subject;
+
 	}
 
-	public static void main(String[] args) {
-		
-		// TODO: Write a test code here and execute and text.
-		TextBook tb = new TextBook("History");
-		System.out.println(getAgeOrTitle(tb));
-
-		Fiction fc = new Fiction("Lord Of The Rings",FictionType.Tragedy);
-		System.out.println(getAgeOrTitle(fc));
-		
-		Comic cc = new Comic("Spiderman", 16);
-		System.out.println(getAgeOrTitle(cc));
+	// TODO : create a getter if required.
+	public String getSubject(){
+		return this.subject;
 	}
+	
+	// TODO: Create a setter if required
+	
+	// TODO: write a toString method
+	@Override
+	public String toString() {
+		return "Subject: "+this.subject;
+	}
+
 }

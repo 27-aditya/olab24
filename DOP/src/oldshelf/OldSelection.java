@@ -9,15 +9,25 @@ public class OldSelection {
 	 * returns if o is not a book, returns empty string, if Comic, returns title, of Fiction
 	 * returns name, and if TextBook, returns subject.
 	 */
-	public static String getAgeOrTitle(Object o) {
+	public static String getAgeOrTitle(Object obj) {
 		
-		if (o instanceof Book) {
-			if (o instanceof Comic) 
-				return ((Comic)o).getTitle();
-			else if (o instanceof Fiction) 
-				return ((Fiction)o).getName();
-			else if (o instanceof TextBook) 
-				return ((TextBook)o).getSubject();
+		if (obj instanceof Book) {
+		// 	if (obj instanceof Comic) 
+		// 		return ((Comic)obj).getTitle();
+		// 	else if (obj instanceof Fiction) 
+		// 		return ((Fiction)obj).getName();
+		// 	else if (obj instanceof TextBook) 
+		// 		return ((TextBook)obj).getSubject();
+			switch (obj.getClass().getSimpleName()) {
+				case "Comic":
+					return ((Comic)obj).getTitle();
+				case "Fiction":
+					return ((Fiction)obj).getName();
+				case "TextBook":
+					return ((TextBook)obj).getSubject();
+				default:
+					throw new AssertionError();
+			}
 		}
 		
 		return null;

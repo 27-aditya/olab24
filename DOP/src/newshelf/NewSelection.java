@@ -11,17 +11,30 @@ public class NewSelection {
 	 */
 	public static String getAgeOrTitle(Object obj) {
 		
-		if (obj instanceof Comic cc) {
-			return ((Comic) obj).Title();
-		}
-		if(obj instanceof TextBook tb){
-			return ((TextBook) obj).subject();
-		}	
-		if(obj instanceof Fiction fc){
-			return ((Fiction) obj).name();
-		}
+		// if (obj instanceof Comic cc) {
+		// 	return ((Comic) obj).Title();
+		// }
+		// if(obj instanceof TextBook tb){
+		// 	return ((TextBook) obj).subject();
+		// }	
+		// if(obj instanceof Fiction fc){
+		// 	return ((Fiction) obj).name();
+		// }
 
-		return null;
+		switch(obj){
+			case Comic(String Title,int ageOfMainCharacter) -> {
+				return Title;
+			}
+			case Fiction(String name,FictionType type) -> {
+				return name;
+			}
+			case TextBook(String subject) -> {
+				return subject;
+			}
+			default -> {
+				return null;
+			}
+		}
 	}
 
 	public static void main(String[] args) {
